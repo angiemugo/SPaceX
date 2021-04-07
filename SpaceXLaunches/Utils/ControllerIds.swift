@@ -12,4 +12,6 @@ enum ControllerIds: String {
 
 enum ViewIds: String {
     case rocketImagesView = "RocketImagesView"
+    case genericErrorView = "GenericErrorView"
+
 }

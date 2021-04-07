@@ -52,5 +52,10 @@ class RocketDetailViewController: BaseViewController {
             guard let self = self, let data = data else { return }
             self.setUpView(data)
         }).disposed(by: disposeBag)
+
+        viewModel.errorRelay.subscribe(onNext: { [weak self] error in
+            guard let self = self, let error = error else { return }
+            self.showErrorView(error, self.view, self.viewModel.fetchRocket)
+        }).disposed(by: disposeBag)
     }
 }

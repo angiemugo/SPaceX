@@ -31,7 +31,7 @@ class LaunchesListViewModel {
             self.loading.accept(false)
             self.getUIModel(launches)
         } onFailure: { error in
-            self.errorRelay.accept(error)
+            self.errorRelay.accept(error as? LaunchErrors)
         }.disposed(by: disposeBag)
     }
 

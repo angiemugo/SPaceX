@@ -18,6 +18,8 @@
 		FD3FA6BA261E4A9C00A025B6 /* LaunchesLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FA6B9261E4A9C00A025B6 /* LaunchesLocalDataSource.swift */; };
 		FD3FA6C7261E512D00A025B6 /* Launches.json in Resources */ = {isa = PBXBuildFile; fileRef = FD3FA6A1261E42FA00A025B6 /* Launches.json */; };
 		FD3FA6CE261E513000A025B6 /* RocketDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = FD3FA6A6261E430700A025B6 /* RocketDetails.json */; };
+		FD3FA6DF261E577300A025B6 /* GenericErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FA6DE261E577300A025B6 /* GenericErrorView.swift */; };
+		FD3FA6E4261E579200A025B6 /* GenericErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD3FA6E3261E579200A025B6 /* GenericErrorView.xib */; };
 		FD41FBDE261CDC5500C27F49 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD41FBDD261CDC5500C27F49 /* UITableView+Extension.swift */; };
 		FD41FBE3261CDC7E00C27F49 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD41FBE2261CDC7E00C27F49 /* UITableViewCell+Extension.swift */; };
 		FD41FBE8261CDD5400C27F49 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD41FBE7261CDD5300C27F49 /* BaseViewController.swift */; };
@@ -88,6 +90,8 @@
 		FD3FA6AB261E442C00A025B6 /* LaunchesRemoteDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesRemoteDataSourceProtocol.swift; sourceTree = "<group>"; };
 		FD3FA6B3261E45EE00A025B6 /* JsonLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLocalDataSource.swift; sourceTree = "<group>"; };
 		FD3FA6B9261E4A9C00A025B6 /* LaunchesLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesLocalDataSource.swift; sourceTree = "<group>"; };
+		FD3FA6DE261E577300A025B6 /* GenericErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericErrorView.swift; sourceTree = "<group>"; };
+		FD3FA6E3261E579200A025B6 /* GenericErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericErrorView.xib; sourceTree = "<group>"; };
 		FD41FBDD261CDC5500C27F49 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		FD41FBE2261CDC7E00C27F49 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		FD41FBE7261CDD5300C27F49 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -285,6 +289,8 @@
 				FD3FA661261E345000A025B6 /* Container+Extension.swift */,
 				FD3FA675261E380500A025B6 /* DependencyInjection.swift */,
 				FD3FA6B3261E45EE00A025B6 /* JsonLocalDataSource.swift */,
+				FD3FA6DE261E577300A025B6 /* GenericErrorView.swift */,
+				FD3FA6E3261E579200A025B6 /* GenericErrorView.xib */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -463,6 +469,7 @@
 				FD6E585F261AFDA90035B717 /* Assets.xcassets in Resources */,
 				FD6E5925261CD5910035B717 /* LaunchTableViewCell.xib in Resources */,
 				FD6E58A7261AFE7A0035B717 /* LaunchesListViewController.xib in Resources */,
+				FD3FA6E4261E579200A025B6 /* GenericErrorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +616,7 @@
 				FD6E5853261AFDA60035B717 /* AppDelegate.swift in Sources */,
 				FD6E58B3261AFF6D0035B717 /* RocketResponse.swift in Sources */,
 				FD6E58D4261B04AA0035B717 /* APIClient.swift in Sources */,
+				FD3FA6DF261E577300A025B6 /* GenericErrorView.swift in Sources */,
 				FD6E58AC261AFE960035B717 /* LaunchesListViewCoordinator.swift in Sources */,
 				FD41FC59261E193A00C27F49 /* UIImageView+Extension.swift in Sources */,
 				FD3FA6AC261E442C00A025B6 /* LaunchesRemoteDataSourceProtocol.swift in Sources */,

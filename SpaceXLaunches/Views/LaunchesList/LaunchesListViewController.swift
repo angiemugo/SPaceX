@@ -42,13 +42,20 @@ class LaunchesListViewController: BaseViewController {
                 guard let self = self else { return }
                 self.viewModel.showRocket(indexPath)
             }).disposed(by: disposeBag)
+
         viewModel.loading.subscribe(onNext: { [weak self] loading in
                 guard let self = self else { return }
             self.updateLoading(loading, self.view)
             }).disposed(by: disposeBag)
+
         viewModel.dataSource.asObservable()
             .bind(to: tableView.rx.items(cellIdentifier: LaunchTableViewCell.identifier, cellType: LaunchTableViewCell.self)) { _, model, cell in
                 cell.configureCell(model)
-            }
+            }.disposed(by: disposeBag)
+
+        viewModel.errorRelay.subscribe(onNext: { [weak self] error in
+            guard let self = self, let error = error else { return }
+            self.showErrorView(error, self.view, self.viewModel.fetchLaunches)
+        }).disposed(by: disposeBag)
     }
 }

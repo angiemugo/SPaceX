@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 
 class BaseViewController: UIViewController {
+    private var genericErrorView: GenericErrorView?
     private var loadingView: UIView?
     var disposeBag = DisposeBag()
 
@@ -53,5 +54,26 @@ class BaseViewController: UIViewController {
         }
         view.addSubview(loadingView)
         loadingView.pinToSuperview()
+    }
+
+    func showErrorView(_ error: Error, _ view: UIView, _ retryAction: @escaping () -> Void) {
+        if genericErrorView == nil {
+            genericErrorView = GenericErrorView(frame: view.bounds)
+        }
+        genericErrorView?.errorMessage = error.localizedDescription
+        genericErrorView?.retryAction = {[unowned self] in
+            self.removeErrorView(view)
+            retryAction()
+        }
+        if !view.subviews.contains(genericErrorView!) {
+            view.addSubview(genericErrorView!)
+            genericErrorView?.pinToSuperview()
+        }
+    }
+
+    private func removeErrorView(_ view: UIView) {
+        if genericErrorView != nil && view.subviews.contains(genericErrorView!) {
+            genericErrorView?.removeFromSuperview()
+        }
     }
 }
